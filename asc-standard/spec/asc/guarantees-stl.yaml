@@ -1,0 +1,3 @@
+max_input_age_ms: 100
+max_tick_interval_ms: 20
+deadline_ms: 10

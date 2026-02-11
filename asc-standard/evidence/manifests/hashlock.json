@@ -1,0 +1,44 @@
+{
+  "entries": [
+    {
+      "path": "evidence/manifests/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/manifests/api-contract-check.json",
+      "sha256": "c63c451b7cc8ab9fdc6c48c2bedb656dce50c6360b77cf1f713fd3fec718043b"
+    },
+    {
+      "path": "evidence/manifests/hashlock.json",
+      "sha256": "f0c7099d26c0ab73b01220b5a6a825469c298e6645438b46ba94e9caf59e856d"
+    },
+    {
+      "path": "evidence/manifests/kernel-test.json",
+      "sha256": "b7aca52d8639a81eddcc45232706dc6b23ed9e8ac0e2c2bd5c33c55cf7fb4901"
+    },
+    {
+      "path": "evidence/manifests/releasepack.json",
+      "sha256": "6f234d8b96585cb17b0968a79a0e60429ed277deb6c4d9384482f211311706f7"
+    },
+    {
+      "path": "evidence/manifests/releasepack.tgz",
+      "sha256": "3eee80e70ad8e8dca73fcec88cd1c5eadf93d517154c7c9a7233175fa273ca1e"
+    },
+    {
+      "path": "evidence/manifests/replay-determinism.json",
+      "sha256": "a5570754e44e5504fb54a40f9c607961df4bbdbeb17fdfe70da106a9b1f37b25"
+    },
+    {
+      "path": "evidence/manifests/spec-hash.txt",
+      "sha256": "e96ab4d3de44a143b321170cf604e7242a7a96209d120c0fb3e7a9a7f29efd63"
+    },
+    {
+      "path": "evidence/manifests/temporal-guarantee.json",
+      "sha256": "d448bed5bd5256bfe63893313050319f40324df2e8df503a054c95d0b980610d"
+    },
+    {
+      "path": "evidence/manifests/tracecheck-report.json",
+      "sha256": "bcbabb9f8aaeddd56fb43dc99782d33ed912f7fccdb8e8ed4552c59a1aae7c7a"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+min_soc_percent: 20.0
+reserve_endurance_s: 180.0
+max_power_w: 2500.0

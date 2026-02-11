@@ -1,0 +1,21 @@
+name: release
+on:
+  workflow_dispatch:
+jobs:
+  package-evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build traceability report
+        run: python3 tools/tracecheck/tracecheck.py --repo-root .
+      - name: Build hashlock manifest
+        run: python3 tools/hashlock/hashlock.py --repo-root .
+      - name: Package release evidence
+        run: python3 tools/releasepack/releasepack.py --repo-root .
+      - name: Upload release package
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-evidence
+          path: |
+            evidence/manifests/releasepack.tgz
+            evidence/manifests/releasepack.json

@@ -1,0 +1,6 @@
+frame: NED
+position_bounds_m:
+  min: [-5000.0, -5000.0, -1000.0]
+  max: [5000.0, 5000.0, 100.0]
+attitude_limit_deg: 80.0
+max_speed_mps: 120.0

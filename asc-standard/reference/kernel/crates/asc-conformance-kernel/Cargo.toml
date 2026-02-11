@@ -1,0 +1,8 @@
+[package]
+name = "asc-conformance-kernel"
+version = "0.1.0"
+edition = "2021"
+
+[dev-dependencies]
+asc-kernel-runtime = { path = "../asc-kernel-runtime" }
+asc-types = { path = "../asc-types" }

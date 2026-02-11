@@ -1,0 +1,4 @@
+max_roll_rate_dps: 120.0
+max_pitch_rate_dps: 100.0
+max_yaw_rate_dps: 80.0
+max_climb_rate_mps: 8.0

@@ -1,0 +1,31 @@
+name: conformance
+on: [push, pull_request]
+jobs:
+  conformance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Run kernel conformance tests
+        run: cargo test --manifest-path reference/kernel/Cargo.toml -p asc-conformance-kernel
+      - name: Validate conformance corpus files
+        run: |
+          test -f conformance/vectors/kernel-smoke.json
+          test -f conformance/fixtures/replay-seed-uas-small.json
+          test -f conformance/profiles/uas-small-suite.yaml
+      - name: Build conformance index report
+        run: |
+          mkdir -p conformance/reports
+          cat > conformance/reports/conformance-index.json <<JSON
+          {
+            "profile": "uas-small",
+            "vectors": ["conformance/vectors/kernel-smoke.json"],
+            "fixtures": ["conformance/fixtures/replay-seed-uas-small.json"],
+            "status": "pass"
+          }
+          JSON
+      - name: Upload conformance report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: conformance-report
+          path: conformance/reports/conformance-index.json

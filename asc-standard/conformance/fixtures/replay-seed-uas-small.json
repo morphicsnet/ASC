@@ -1,0 +1,6 @@
+{
+  "fixture_id": "FX-RPY-UAS-001",
+  "description": "Deterministic replay fixture for uas-small profile",
+  "ticks": 25,
+  "time_step_ms": 20
+}

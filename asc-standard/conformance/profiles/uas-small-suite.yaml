@@ -1,0 +1,8 @@
+profile: uas-small
+suites:
+  - syntax
+  - semantics
+  - timing
+  - replay
+vectors:
+  - conformance/vectors/kernel-smoke.json

@@ -1,0 +1,8 @@
+{
+  "package": "evidence/manifests/releasepack.tgz",
+  "included": [
+    "evidence/manifests/spec-hash.txt",
+    "evidence/manifests/tracecheck-report.json",
+    "evidence/manifests/hashlock.json"
+  ]
+}

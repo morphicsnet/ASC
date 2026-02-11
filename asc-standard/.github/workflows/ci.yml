@@ -1,0 +1,20 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Governance files present
+        run: |
+          test -f governance/CHARTER.md
+          test -f governance/CHANGE_CONTROL.md
+          test -f governance/COMPLIANCE_POLICY.md
+      - name: Canonical files present
+        run: |
+          test -f ASC.md
+          test -d spec/asc
+      - name: Traceability check
+        run: python3 tools/tracecheck/tracecheck.py --repo-root .
+      - name: Build hashlock manifest
+        run: python3 tools/hashlock/hashlock.py --repo-root .

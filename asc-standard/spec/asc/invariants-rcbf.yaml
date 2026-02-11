@@ -1,0 +1,3 @@
+min_altitude_m: 5.0
+max_bank_deg: 60.0
+require_geofence: true

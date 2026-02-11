@@ -1,0 +1,7 @@
+test_id,evidence_artifact,notes
+TST-INV-001,evidence/manifests/kernel-test.json,Conformance kernel test output
+TST-DET-001,evidence/manifests/replay-determinism.json,Deterministic replay parity
+TST-SYN-001,evidence/sbom/specgen-hash.txt,Spec generation integrity
+TST-GUA-001,evidence/manifests/temporal-guarantee.json,Temporal guarantee and deadline conformance
+TST-API-001,evidence/manifests/api-contract-check.json,OpenAPI schema contract verification
+TST-RPY-001,evidence/manifests/replay-determinism.json,Replay parity evidence

@@ -1,0 +1,7 @@
+schema_version: 1
+fields:
+  - tick
+  - verdict
+  - reasons
+  - contract_fingerprint
+  - tip_hash
