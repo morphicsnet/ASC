@@ -1,0 +1,35 @@
+version: "1.0.0"
+name: "SensorInterface"
+description: "Interface specification for sensor data acquisition"
+
+interface:
+  name: "ISensor"
+  methods:
+    - name: "read_altitude"
+      returns: "Result<Altitude, SensorError>"
+      deterministic: true
+      
+    - name: "read_airspeed"
+      returns: "Result<Airspeed, SensorError>"
+      deterministic: true
+    
+    - name: "get_status"
+      returns: "SensorStatus"
+      deterministic: true
+    
+    - name: "perform_self_test"
+      returns: "Result<bool, SensorError>"
+      deterministic: false
+      side_effects: "Logs test results to evidence artifacts"
+
+errors:
+  - name: "SensorError"
+    variants:
+      - name: "ReadFailure"
+        description: "Failed to read sensor value"
+      - name: "OutOfRange"
+        description: "Sensor reading out of valid range"
+      - name: "CommunicationError"
+        description: "Communication with sensor hardware failed"
+      - name: "CalibrationError"
+        description: "Sensor calibration is invalid"

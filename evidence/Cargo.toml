@@ -1,0 +1,19 @@
+[package]
+name = "evidence"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Evidence artifact generation for ASC"
+
+[[bin]]
+name = "asc-evidence"
+path = "src/main.rs"
+
+[dependencies]
+kernel = { path = "../kernel" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+anyhow = { workspace = true }
+clap = { workspace = true }

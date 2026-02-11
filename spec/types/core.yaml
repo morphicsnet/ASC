@@ -1,0 +1,63 @@
+version: "1.0.0"
+name: "CoreTypes"
+description: "Core type definitions for ASC"
+
+types:
+  - name: "Altitude"
+    kind: "newtype"
+    base_type: "f64"
+    unit: "feet"
+    constraints:
+      min: 0.0
+      max: 50000.0
+    
+  - name: "Airspeed"
+    kind: "newtype"
+    base_type: "f64"
+    unit: "knots"
+    constraints:
+      min: 0.0
+      max: 600.0
+  
+  - name: "ControlSurfaceDeflection"
+    kind: "newtype"
+    base_type: "f64"
+    unit: "degrees"
+    constraints:
+      min: -30.0
+      max: 30.0
+  
+  - name: "SensorStatus"
+    kind: "enum"
+    variants:
+      - "Active"
+      - "Inactive"
+      - "Failed"
+      - "Degraded"
+  
+  - name: "FlightState"
+    kind: "struct"
+    fields:
+      - name: "altitude"
+        type: "Altitude"
+        required: true
+      
+      - name: "airspeed"
+        type: "Airspeed"
+        required: true
+      
+      - name: "aileron_deflection"
+        type: "ControlSurfaceDeflection"
+        required: true
+      
+      - name: "elevator_deflection"
+        type: "ControlSurfaceDeflection"
+        required: true
+      
+      - name: "active_sensors"
+        type: "u8"
+        required: true
+      
+      - name: "timestamp_ms"
+        type: "u64"
+        required: true

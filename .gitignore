@@ -1,0 +1,35 @@
+# Rust
+target/
+**/*.rs.bk
+*.pdb
+Cargo.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated files
+**/generated/
+
+# Evidence artifacts (tracked separately)
+evidence/artifacts/*.json
+evidence/artifacts/*.log
+!evidence/artifacts/.gitkeep
+
+# Build artifacts
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+
+# Test outputs
+test-results/
+coverage/

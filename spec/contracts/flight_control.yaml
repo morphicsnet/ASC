@@ -1,0 +1,31 @@
+version: "1.0.0"
+name: "FlightControlContract"
+description: "Safety contract for flight control systems"
+
+preconditions:
+  - name: "altitude_bounds"
+    expression: "altitude >= 0 && altitude <= 50000"
+    description: "Altitude must be within operational bounds"
+  
+  - name: "speed_bounds"
+    expression: "airspeed >= 0 && airspeed <= 600"
+    description: "Airspeed must be within safe operational range"
+
+postconditions:
+  - name: "control_surface_limits"
+    expression: "abs(aileron_deflection) <= 25 && abs(elevator_deflection) <= 30"
+    description: "Control surfaces must remain within physical limits"
+
+invariants:
+  - name: "redundancy_check"
+    expression: "active_sensors >= 2"
+    description: "At least two sensors must be active for redundancy"
+
+  - name: "rate_limit"
+    expression: "delta_control <= 10.0"
+    description: "Rate of control change must be limited"
+
+evidence_requirements:
+  - "execution_trace"
+  - "state_snapshot"
+  - "violation_log"
