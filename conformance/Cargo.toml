@@ -1,0 +1,23 @@
+[package]
+name = "conformance"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Conformance testing for ASC"
+
+[[bin]]
+name = "asc-conformance"
+path = "src/main.rs"
+
+[dependencies]
+kernel = { path = "../kernel" }
+evidence = { path = "../evidence" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+anyhow = { workspace = true }
+clap = { workspace = true }
+
+[dev-dependencies]
+proptest = { workspace = true }
