@@ -20,7 +20,6 @@ Thumbs.db
 
 # Evidence artifacts (tracked separately)
 evidence/artifacts/*.json
-evidence/artifacts/*.log
 !evidence/artifacts/.gitkeep
 
 # Build artifacts
